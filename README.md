@@ -6,9 +6,9 @@ Contacts API
 
 1) Configurer le fichier app/Database.php
 
-2) Importer la base de donnée testapi.sql qui se trouve dans le dossier racine
+2) Importer la base de donnÃ©e testapi.sql qui se trouve dans le dossier racine
 
-3) Lancer votre serveur apache ou se pointer à la racine et executer la commande :
+3) Lancer votre serveur apache ou se pointer Ã  la racine et executer la commande :
 
 ```
 php -S localhost:{port} index.php
@@ -30,11 +30,11 @@ GET /contacts/{id}
 
 OUTPUT Succeed
 
-{"id":"1","civilite":"Mr","nom":"Anene","prenom":"Saddem","date_naissance":"1991-02-21","date_creation":"2016-11-06 17:05:39","date_modification":"2016-11-06 18:09:01"}
+{"id":"1","civilite":"Mr","nom":"An","prenom":"Saddem","date_naissance":"1989-02-22","date_creation":"2016-11-06 17:05:39","date_modification":"2016-11-06 18:09:01"}
 
 OUTPUT Error
 
-{"success": 0,"message": "Contacts non trouvé"}
+{"success": 0,"message": "Contacts non trouvÃ©"}
 
 2) Inserer contact
 
@@ -42,11 +42,11 @@ POST /contacts?token={token}
 
 OUTPUT Succeed
 
-{"success": 1,"message": "Contact ajouté avec succés","id": "1"}
+{"success": 1,"message": "Contact ajoutÃ© avec succÃ©s","id": "1"}
 
 OUTPUT Error
 
-{"success": 0,"message": "Les champs civilité, nom et prénom sont obligatoire."}
+{"success": 0,"message": "Les champs civilitÃ©, nom et prÃ©nom sont obligatoire."}
 
 3) Modifier contact
 
@@ -54,11 +54,11 @@ PUT /contacts/{id}?token={token}
 
 OUTPUT Succeed
 
-{"success": 1,"message": "Contact modifié avec succés","id": "1"}
+{"success": 1,"message": "Contact modifiÃ© avec succÃ©s","id": "1"}
 
 OUTPUT Error
 
-{"success": 0,"message": "Contacts non trouvé"}
+{"success": 0,"message": "Contacts non trouvÃ©"}
 
 4) Supprimer contact
 
@@ -66,11 +66,11 @@ DELETE /contacts/{id}?token={token}
 
 OUTPUT Succeed
 
-{"success": 1,"message": "Contacts 1 Supprimé avec succes"}
+{"success": 1,"message": "Contacts 1 SupprimÃ© avec succes"}
 
 OUTPUT Error
 
-{"success": 0,"message": "Contacts non trouvé"}
+{"success": 0,"message": "Contacts non trouvÃ©"}
 
 ## Adresses
 
@@ -101,7 +101,7 @@ DELETE /adresses/{id}?token={token}
 
 ## XML
 
-Pour vusualiser les données en xml il faut préciser le type de contenue avec "content_type=xml" exemple :
+Pour vusualiser les donnÃ©es en xml il faut prÃ©ciser le type de contenue avec "content_type=xml" exemple :
 
 GET /adresses?token={token}&content_type=xml
 
@@ -120,9 +120,9 @@ Un contact peut avoir plusieur adresse, vous devez selectionner un seul contact 
 
 1. index.php -> Fichier racine du projet
 
-2. vendor/autoload.php -> Ce fichier est generé par Composer
+2. vendor/autoload.php -> Ce fichier est generÃ© par Composer
 
-3. app/Database.php -> Configuration de la base de donnée et traitement des requêtes
+3. app/Database.php -> Configuration de la base de donnÃ©e et traitement des requÃªtes
 
 4. app/Api.php -> Traitement des verbes HTTP et encodage
 
