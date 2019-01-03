@@ -17,4 +17,4 @@ $params = explode('/', trim($_SERVER['PATH_INFO'], '/'));
 		$api->getData($params);
 	}
 }
-else exit ("Bonjour et bienvenu dans TEST API de Appartoo, veuillez lire le fichier README. Merci");
+else exit ("Bonjour et bienvenu dans simple php api, veuillez lire le fichier README. Merci");
