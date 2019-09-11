@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+  php:
+    image: php:7.3-cli
+    volumes:
+      - ./:/var/www
+      - ./docker/php/fpm:/etc/php/7.3/fpm/pool.d
+    depends_on:
+      - db
+    links:
+      - db
